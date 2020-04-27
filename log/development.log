@@ -2184,3 +2184,15 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 305ms (Views: 271.6ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/authors/2/posts" for 73.244.211.24 at 2020-04-27 03:31:05 +0000
+Cannot render console from 73.244.211.24! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered posts/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 335ms (Views: 283.9ms | ActiveRecord: 1.4ms)
+
+
